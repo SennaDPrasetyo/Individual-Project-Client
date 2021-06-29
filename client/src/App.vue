@@ -12,7 +12,23 @@ import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
-  components: { Navbar, Footer }
+  components: { Navbar, Footer },
+  methods: {
+    isLoggedIn () {
+      this.$store.commit('ISLOGGEDIN')
+    },
+    isCustomer () {
+      this.$store.commit('ISCUSTOMER')
+    }
+  },
+  created () {
+    if (localStorage.access_token){
+      this.isLoggedIn()
+      if (localStorage.role === 'Customer'){
+        this.isCustomer()
+      }
+    }
+  }
 }
 </script>
 

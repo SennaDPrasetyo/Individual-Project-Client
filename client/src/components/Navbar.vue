@@ -11,20 +11,29 @@
                         </svg>
                         <span class="mx-1 text-sm font-medium text-gray-500">IDN</span>
                     </div>
-                    <div class="w-full text-gray-800 md:text-center text-2xl font-semibold">
+                    <button @click.prevent="toHome" class="w-full focus:outline-none text-gray-800 md:text-center text-2xl font-semibold">
                         Dyandta Zoe
-                    </div>
+                    </button>
                     <div class="flex items-center justify-end w-100">
-                        <button class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
+                        <button v-if="isLoggedIn && isCustomer" class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
                             </svg>
                         </button> <!-- cart button -->
-                        <button class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
+                        <button @click.prevent="toMyDesign" v-if="isLoggedIn && !isCustomer" class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
+                            My Design
+                        </button>
+                        <button @click.prevent="" v-if="isLoggedIn && !isCustomer" class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
+                            Add a Design
+                        </button>
+                        <button @click.prevent="toLogin" v-if="!isLoggedIn" class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
                             Sign In
                         </button>
-                        <button class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
+                        <button @click.prevent="toRegister" v-if="!isLoggedIn" class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
                             Sign Up
+                        </button>
+                        <button @click.prevent="logout" v-if="isLoggedIn" class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
+                            Log Out
                         </button>
                     </div>
                 </div>
@@ -43,7 +52,32 @@
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  computed: {
+      isLoggedIn () {
+          return this.$store.state.isLoggedIn
+      },
+      isCustomer () {
+          return this.$store.state.isCustomer
+      }
+  },
+  methods: {
+      toLogin () {
+          this.$router.push({ name: 'Login' }).catch(() => {})
+      },
+      toRegister () {
+          this.$router.push({ name: 'RegisterCust'}).catch(() => {})
+      },
+      toHome () {
+          this.$router.push({ name: 'Home' }).catch(() => {})
+      },
+      logout () {
+          this.$store.commit('LOGOUT')
+      },
+      toMyDesign () {
+          this.$store.dispatch('myDesign')
+      } 
+  }
 }
 </script>
 
