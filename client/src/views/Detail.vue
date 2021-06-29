@@ -35,9 +35,18 @@
 export default {
   name: 'Detail',
   computed: {
-      oneDesign () {
-          return this.$store.state.oneDesign
+    oneDesign () {
+      return this.$store.state.oneDesign
+    }
+  },
+  methods: {
+      getOneDesign () {
+          const id = this.$route.params.id
+          this.$store.dispatch('getOneDesign', id)
       }
+  },
+  created () {
+      this.getOneDesign()
   }
 }
 </script>

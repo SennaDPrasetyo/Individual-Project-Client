@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Detail from '../views/Detail.vue'
 import RegisterCust from '../views/RegisterCust.vue'
+import RegisterDesigner from '../views/RegisterDesigner.vue'
+import MyDesign from '../views/MyDesign.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +29,16 @@ const routes = [
     path: '/register/customer',
     name: 'RegisterCust',
     component: RegisterCust
+  },
+  {
+    path: '/register/designer',
+    name: 'RegisterDesigner',
+    component: RegisterDesigner
+  },
+  {
+    path: '/designer/myDesign',
+    name: 'MyDesign',
+    component: MyDesign
   }
 ]
 
