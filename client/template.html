@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./tailwind.css">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <title>Template</title>
+</head>
+<body>
+
+<div class="bg-gray-50">
+    <section id="header">
+        <!-- Navbar -->
+        <nav class="bg-white shadow">
+            <div class="container mx-auto px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="hidden w-full text-gray-500 md:flex md:items-center">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2721 10.2721C16.2721 12.4813 14.4813 14.2721 12.2721 14.2721C10.063 14.2721 8.27214 12.4813 8.27214 10.2721C8.27214 8.06298 10.063 6.27212 12.2721 6.27212C14.4813 6.27212 16.2721 8.06298 16.2721 10.2721ZM14.2721 10.2721C14.2721 11.3767 13.3767 12.2721 12.2721 12.2721C11.1676 12.2721 10.2721 11.3767 10.2721 10.2721C10.2721 9.16755 11.1676 8.27212 12.2721 8.27212C13.3767 8.27212 14.2721 9.16755 14.2721 10.2721Z" fill="currentColor" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.79417 16.5183C2.19424 13.0909 2.05438 7.39409 5.48178 3.79417C8.90918 0.194243 14.6059 0.054383 18.2059 3.48178C21.8058 6.90918 21.9457 12.6059 18.5183 16.2059L12.3124 22.7241L5.79417 16.5183ZM17.0698 14.8268L12.243 19.8965L7.17324 15.0698C4.3733 12.404 4.26452 7.97318 6.93028 5.17324C9.59603 2.3733 14.0268 2.26452 16.8268 4.93028C19.6267 7.59603 19.7355 12.0268 17.0698 14.8268Z" fill="currentColor" />
+                        </svg>
+                        <span class="mx-1 text-sm font-medium text-gray-500">IDN</span>
+                    </div>
+                    <div class="w-full text-gray-800 md:text-center text-2xl font-semibold">
+                        Dyandta Zoe
+                    </div>
+                    <div class="flex items-center justify-end w-100">
+                        <button class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                            </svg>
+                        </button> <!-- cart button --> 
+                        <button class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
+                            Sign In
+                        </button>
+                        <button class="text-gray-500 focus:outline-none mx-4 sm:mx-0">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
+                <!-- <div class="relative mt-6 max-w-lg mx-auto">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                    <svg class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                    <input class="w-full border rounded-md pl-10 pr-4 py-2 focus:border-blue-500 focus:outline-none focus:shadow-outline" type="text" placeholder="Search">
+                </div> --> <!-- search bar -->
+            </div>
+        </nav>
+        <div class="w-full bg-cover bg-center" style="height:32rem; background-image: url(https://cdn.decorilla.com/online-decorating/wp-content/uploads/2020/02/Rustic_Industrial16.jpg);">
+            <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
+                <div class="text-center">
+                    <h1 class="text-gray-100 text-2xl font-semibold uppercase md:text-3xl">Inspire Your Design</h1>
+                    <button class="mt-4 px-4 py-2 bg-blue-600 text-white text-sm uppercase 
+                    font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Search Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="login-page">
+        <div class="flex items-center min-h-screen dark:bg-gray-900">
+          <div class="container mx-auto">
+              <div class="max-w-md mx-auto my-10">
+                  <div class="text-center">
+                      <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">Sign in</h1>
+                  </div>
+                  <div class="m-7">
+                      <form>
+                          <div class="mb-6">
+                              <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+                              <input type="email" name="emailLogin" id="emailLogin" 
+                              placeholder="example@mail.com" 
+                              class="w-full px-3 py-2 placeholder-gray-300 border 
+                              border-gray-300 rounded-md focus:outline-none 
+                              focus:ring focus:ring-indigo-100 focus:border-indigo-300 
+                              dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                          </div>
+                          <div class="mb-6">
+                              <div class="flex justify-between mb-2">
+                                  <label for="password" class="text-sm text-gray-600 dark:text-gray-400">Password</label>
+                              </div>
+                              <input type="password" name="passwordLogin" id="passwordLogin" placeholder="Password" 
+                              class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md 
+                              focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 
+                              dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                          </div>
+                          <div class="mb-6">
+                              <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">Sign in</button>
+                          </div>
+                          <p class="text-sm text-center text-gray-400">Don&#x27;t have an account yet?
+                              <a href="#" class="text-indigo-400 focus:outline-none focus:underline 
+                              focus:text-indigo-500 dark:focus:border-indigo-800">Sign up</a>, or log in using:</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register-page">
+        <div class="flex items-center min-h-screen dark:bg-gray-100">
+          <div class="container mx-auto">
+              <div class="bg-gray-50 max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+                  <div class="text-center">
+                      <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">Sign Up</h1>
+                  </div>
+                    <div class="m-7">
+                      <form>
+                          <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE">
+                          <input type="hidden" name="subject" value="New Submission from Web3Forms">
+                          <input type="checkbox" name="botcheck" id="" style="display: none;">
+                          <div class="mb-6">
+                              <label for="emailRegister" class=" block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address<span style="color:#ff0000">*</span></label>
+                              <input type="email" name="emailRegister" id="emailRegister" placeholder="example@mail.com" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                          </div>
+                          <div class="mb-6">
+                              <label for="passwordRegister" class=" block mb-2 text-sm text-gray-600 dark:text-gray-400">Password<span style="color:#ff0000">*</span></label>
+                              <input type="password" name="passwordRegister" id="passwordRegister" placeholder="Password" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                          </div>
+                          <div class="mb-6">
+                              <label for="phoneNumber" class="text-sm text-gray-600 dark:text-gray-400">Phone Number</label>
+                              <input type="text" name="phoneNumber" id="phoneNumber" placeholder="+(62)8112345678" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                          </div>
+                          <div class="mb-6">
+                            <label for="address" class="text-sm text-gray-600 dark:text-gray-400">Address</label>
+                            <input type="text" name="address" id="address" placeholder="example street, example residence" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                          </div>
+                          <div class="mb-6">
+                              <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">Sign Up</button>
+                          </div>
+                          <p class="text-sm text-center text-gray-400">Already have an account?
+                            <a href="#" class="text-indigo-400 focus:outline-none focus:underline 
+                              focus:text-indigo-500 dark:focus:border-indigo-800">Sign in</a></p>
+                          <p class="text-base text-center text-gray-400" id="result">
+                          </p>
+                        </form>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="detail-page">
+        <div class="container mx-auto px-6">
+            <div class="md:flex md:items-center">
+                <div class="swiper flex overflow-x-scroll w-1/2">
+                  <img class="w-full h-1/2 object-cover bg-gray-300" src="https://images.unsplash.com/photo-1582148453014-b7d4117d3300?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" id="slide1">
+                  <img class="w-full h-1/2 object-cover bg-gray-300" src="https://images.unsplash.com/photo-1582224119362-9df4eead238a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80" id="slide2">
+                  <img class="w-full h-1/2 object-cover bg-gray-300" src="https://images.unsplash.com/photo-1582229822017-3b77911e82bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" id="slide3">
+                </div>
+                <div class="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2">
+                    <h3 class="text-gray-700 uppercase text-lg">Design By Dudi Purnomo</h3>
+                    <span class="text-gray-500 mt-3">Living Room</span>
+                    <hr class="my-3">
+                    <div class="mt-2">
+                        <label class="text-gray-700 text-sm" for="count">A modern minimalist living room</label>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <button class="px-8 py-2 bg-indigo-600 text-white text-sm font-medium 
+                        rounded hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500">Chat Now</button>
+                        <button class="mx-2 text-gray-600 border rounded-md p-2 hover:bg-gray-200 focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="main-page">
+    <main class="my-8">
+        <div class="container">
+            <!-- filter by category -->
+            <div class="relative">
+                <input type="checkbox" id="sortbox" class="hidden absolute">
+                <label for="sortbox" class="flex items-center space-x-1 cursor-pointer">
+                <span class="text-gray-700 text-2xl font-medium">Category</span>
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </label>
+                    <div id="sortboxmenu" class="absolute  top-full min-w-max shadow rounded opacity-0 bg-gray-300 border border-gray-400 transition delay-75 ease-in-out z-10">
+                    <ul class="block text-right text-gray-900">
+                        <li><a href="#" class="block text-gray-700 px-3 py-2 hover:bg-gray-200">Featured</a></li>
+                        <li><a href="#" class="block text-gray-700 px-3 py-2 hover:bg-gray-200">Newest</a></li>
+                        <li><a href="#" class="block text-gray-700 px-3 py-2 hover:bg-gray-200">Price: Low to High</a></li>
+                        <li><a href="#" class="block text-gray-700 px-3 py-2 hover:bg-gray-200">Price: High to Low</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Card -->
+            <section id="card">
+                <div class="flex flex-col m-auto p-auto">
+                    <div class="pr-16 pb-12 hide-scroll-bar">
+                        <div class="flex flex-nowrap grid gap-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+                            <div class="px-3">
+                              <div class="w-64 h-72 max-w-xs overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                                  <div class="flex items-end justify-end h-72 w-full bg-cover" style="background-image: url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?ixlib=rb-1.2.1&auto=format&fit=crop&w=689&q=80')">
+                                      <button class="p-2 rounded-full bg-red-600 text-white mx-3 mb-3 hover:bg-red-500 focus:outline-none focus:bg-red-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="px-3">
+                              <div class="w-64 h-72 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                                  <div class="flex items-end justify-end h-72 w-full bg-cover" style="background-image: url('https://images.unsplash.com/photo-1495856458515-0637185db551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')">
+                                      <button class="p-2 rounded-full bg-red-600 text-white mx-3 mb-3 hover:bg-red-500 focus:outline-none focus:bg-red-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="px-3">
+                              <div class="w-64 h-72 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                                  <div class="flex items-end justify-end h-72 w-full bg-cover" style="background-image: url('https://images.unsplash.com/photo-1495856458515-0637185db551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')">
+                                      <button class="p-2 rounded-full bg-red-600 text-white mx-3 mb-3 hover:bg-red-500 focus:outline-none focus:bg-red-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="px-3">
+                              <div class="w-64 h-72 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                                  <div class="flex items-end justify-end h-72 w-full bg-cover" style="background-image: url('https://images.unsplash.com/photo-1495856458515-0637185db551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')">
+                                      <button class="p-2 rounded-full bg-red-600 text-white mx-3 mb-3 hover:bg-red-500 focus:outline-none focus:bg-red-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="px-3">
+                              <div class="w-64 h-72 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                                  <div class="flex items-end justify-end h-72 w-full bg-cover" style="background-image: url('https://images.unsplash.com/photo-1495856458515-0637185db551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')">
+                                      <button class="p-2 rounded-full bg-red-600 text-white mx-3 mb-3 hover:bg-red-500 focus:outline-none focus:bg-red-500">
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Page -->
+            <div class="flex justify-center">
+                <div class="flex rounded-md mt-8">
+                    <a href="#" class="py-2 px-4 leading-tight bg-white border border-gray-200 text-blue-700 border-r-0 ml-0 rounded-l hover:bg-blue-500 hover:text-white"><span>Previous</a></a>
+                    <!-- <a href="#" class="py-2 px-4 leading-tight bg-white border border-gray-200 text-blue-700 border-r-0 hover:bg-blue-500 hover:text-white"><span>1</span></a>
+                    <a href="#" class="py-2 px-4 leading-tight bg-white border border-gray-200 text-blue-700 border-r-0 hover:bg-blue-500 hover:text-white"><span>2</span></a>
+                    <a href="#" class="py-2 px-4 leading-tight bg-white border border-gray-200 text-blue-700 border-r-0 hover:bg-blue-500 hover:text-white"><span>3</span></a> -->
+                    <a href="#" class="py-2 px-4 leading-tight bg-white border border-gray-200 text-blue-700 rounded-r hover:bg-blue-500 hover:text-white"><span>Next</span></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    </section>
+
+    <section id="footer">
+    <footer class="bg-gray-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-500 hover:text-gray-400">Dyandta Zoe</a>
+            <p class="py-2 text-gray-500 sm:py-0">Created By Senna</p>
+        </div>
+    </footer>
+    </section>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
+</body>
+</html>
